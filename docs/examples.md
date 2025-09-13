@@ -175,6 +175,7 @@ This section provides full PaletteJSON files that illustrate the schema in pract
       "author": { "name": "Catppuccin", "url": "https://catppuccin.com/" },
       "license": "MIT",
       "tags": ["catppuccin", "mocha", "theme", "ui"],
+      "colorSpace": "sRGB",
       "colors": [
         {
           "id": "rosewater",
