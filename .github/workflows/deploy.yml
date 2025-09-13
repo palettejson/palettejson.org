@@ -25,6 +25,11 @@ jobs:
       - name: Build website
         run: npm run build
 
+      - name: Fetch schema repo
+        run: |
+          git clone --depth 1 https://github.com/palettejson/palettejson-schema.git tmp-schema
+          cp -r tmp-schema/schema ./build/schema
+
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
