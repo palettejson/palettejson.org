@@ -55,8 +55,16 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+    // Use project's social card, not the docsite one
     image: "img/palettejson_social.png",
+    metadata: [
+      {
+        name: "keywords",
+        content:
+          "PaletteJSON, color palettes, JSON schema, design systems, colour management, interoperability, open standard",
+      },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
     navbar: {
       title: "PaletteJSON",
       logo: {

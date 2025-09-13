@@ -42,7 +42,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description="PaletteJSON is an open JSON standard for colour palettes — portable, interoperable, and built for designers and developers."
     >
       <HomepageHeader />
       <main>
