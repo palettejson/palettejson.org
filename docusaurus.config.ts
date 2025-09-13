@@ -66,7 +66,7 @@ const config: Config = {
       { name: "twitter:card", content: "summary_large_image" },
       { name: "algolia-site-verification", content: "2F7228F03C7CA83E" },
     ],
-    /*
+
     algolia: {
       // The application ID provided by Algolia
       appId: "5X2IZ9DOOB",
@@ -76,7 +76,6 @@ const config: Config = {
 
       indexName: "palettejson",
     },
-    */
 
     navbar: {
       title: "PaletteJSON",
