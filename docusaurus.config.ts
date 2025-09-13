@@ -64,7 +64,20 @@ const config: Config = {
           "PaletteJSON, color palettes, JSON schema, design systems, colour management, interoperability, open standard",
       },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "algolia-site-verification", content: "2F7228F03C7CA83E" },
     ],
+    /*
+    algolia: {
+      // The application ID provided by Algolia
+      appId: "5X2IZ9DOOB",
+
+      // Public API key: it is safe to commit it
+      apiKey: "c7f0bbc7352d8e74cd962eb8b201a4e1",
+
+      indexName: "palettejson",
+    },
+    */
+
     navbar: {
       title: "PaletteJSON",
       logo: {
@@ -77,6 +90,11 @@ const config: Config = {
           sidebarId: "docSidebar",
           position: "left",
           label: "Documentation",
+        },
+        {
+          href: "https://palettejson.org/schema/v0.1/palettejson.schema.json",
+          label: "Latest Schema",
+          position: "left",
         },
         {
           href: "https://github.com/palettejson/palettejson-schema",
