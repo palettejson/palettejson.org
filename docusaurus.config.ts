@@ -44,7 +44,7 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/palettejson/palettejson.org/",
+          editUrl: "https://github.com/palettejson/palettejson.org/blob/main/",
         },
         blog: false,
         theme: {

@@ -28,7 +28,20 @@ jobs:
       - name: Fetch schema repo
         run: |
           git clone --depth 1 https://github.com/palettejson/palettejson-schema.git tmp-schema
-          cp -r tmp-schema/schema ./build/schema
+          mkdir -p build/schema
+          cp -r tmp-schema/schema/* ./build/schema/
+
+          # Find latest version folder (sort by semantic version, highest wins)
+          latest=$(ls -1 ./build/schema | grep '^v' | sort -V | tail -n 1)
+
+          echo "Latest schema version is $latest"
+
+          # Replace any existing 'latest' and copy the latest version into it
+          rm -rf ./build/schema/latest
+          cp -r "./build/schema/$latest" ./build/schema/latest
+
+          # Verify
+          ls -l ./build/schema
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
