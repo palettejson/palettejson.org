@@ -4,18 +4,6 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
-module.exports = {
-  title: "PaletteJSON",
-  tagline: "A portable JSON container for colour palettes",
-  url: "https://palettejson.org",
-  baseUrl: "/",
-  favicon: "img/favicon.ico",
-  organizationName: "palettejson",
-  projectName: "palettejson.org",
-  trailingSlash: false,
-  // ...
-};
-
 const config: Config = {
   title: "PaletteJSON",
   tagline: "Colours, structured.",

@@ -33,7 +33,7 @@ Palettes describe a collection of colours along with metadata and optional acces
   - `diverging`
 
 - **`colors`** — array  
-  At least two items. Each entry must be a valid [Colour object](./colour.md).
+  At least two items. Each entry must be a valid [Colour object](./color.md).
 
 ## Optional fields
 
