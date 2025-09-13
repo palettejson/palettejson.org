@@ -91,7 +91,7 @@ const config: Config = {
           label: "Documentation",
         },
         {
-          href: "https://palettejson.org/schema/v0.1/palettejson.schema.json",
+          href: "https://palettejson.org/schema/latest/palettejson.schema.json",
           label: "Latest Schema",
           position: "left",
         },
