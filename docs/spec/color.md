@@ -76,6 +76,19 @@ If any color in the palette has `position`, **all** colors must.
 - **Type:** string
 - **Purpose:** Freeform comments.
 
+### `altRepresentations` (optional)
+
+- **Type:** array of objects
+- **Fields:**
+  - `colorSpace` — string (required, one of: `sRGB`, `DisplayP3`, `Lab`, `OKLCH`, `sRGB-linear-extended`, `HSL`)
+  - `components` — array of numbers (required, following the specified color space rules)
+- **Purpose:** Alternative color space representations of the same color.
+- See [Color spaces](./color-spaces.md) for component ranges.
+
+:::info
+Unlike the palette-level `colorSpace` which applies to all `components`, each `altRepresentations` entry declares its own `colorSpace` and must be self-contained. This allows a single color to be expressed in multiple color spaces simultaneously.
+:::
+
 ### `legibility` (optional)
 
 - **Type:** object
@@ -140,6 +153,28 @@ Below are common ways to represent colors.
   "hex": "#EEEEEE",
   "position": 1,
   "notes": "Background shade"
+}
+```
+
+  </TabItem>
+  <TabItem value="altrepresentations" label="altRepresentations">
+
+```json
+{
+  "id": "brand-red",
+  "name": "Brand Red",
+  "hex": "#FF3366",
+  "components": [1.0, 0.2, 0.4],
+  "altRepresentations": [
+    {
+      "colorSpace": "OKLCH",
+      "components": [0.65, 0.25, 12.5]
+    },
+    {
+      "colorSpace": "Lab",
+      "components": [55.2, 75.8, 35.1]
+    }
+  ]
 }
 ```
 

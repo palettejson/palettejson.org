@@ -8,9 +8,10 @@ description: Details how component arrays must be structured for each palette co
 
 # Color Spaces Components
 
-When a color is defined with `components`, the numbers must be interpreted in the context of the palette’s declared `colorSpace`.
+When a color is defined with `components`, the numbers must be interpreted in the context of a declared `colorSpace`. This applies in two scenarios:
 
-If **any** color in a palette uses `components`, the palette must define a `colorSpace`. See the `colorSpace` property on [Palette](./palette) for the list of supported color spaces.
+1. **Palette-level:** When any color in a palette uses `components`, the palette must define a `colorSpace` that applies to all such colors.
+2. **Color-level:** Individual colors can specify alternative representations using `altRepresentations`, where each entry declares its own `colorSpace`.
 
 ## Supported values by color spaces
 
@@ -117,5 +118,6 @@ Example:
 ## Validation rules
 
 - `hex` values are **always** treated as display sRGB, regardless of palette `colorSpace`.
-- `components` must match the palette’s declared `colorSpace`.
+- `components` must match the palette's declared `colorSpace`.
+- `altRepresentations` entries are self-contained: each must declare its own `colorSpace` and follow the corresponding component validation rules.
 - If a palette mixes hex and components, the hex values remain in display sRGB; components follow the palette-level color space.

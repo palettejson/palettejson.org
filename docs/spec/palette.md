@@ -50,10 +50,10 @@ Palettes describe a collection of colors along with metadata and optional access
 ### `author` (optional)
 
 - **Type:** object
-- **Purpose:** Credits who created or maintains the palette.
 - **Fields:**
-  - `name` — string
-  - `url` — string (must be a valid URI)
+  - `name` — string (optional)
+  - `url` — string (optional, must be a valid URI)
+- **Purpose:** Credits who created or maintains the palette.
 
 ### `license` (optional)
 
@@ -69,7 +69,8 @@ Palettes describe a collection of colors along with metadata and optional access
 
 - **Type:** string
 - **Allowed values:** `sRGB`, `DisplayP3`, `Lab`, `OKLCH`, `sRGB-linear-extended`, `HSL`
-- **Purpose:** Declares how any `components` values in this palette are interpreted. See [Color spaces](./color-spaces.md) for component ranges.
+- **Purpose:** Declares how any `components` values in this palette are interpreted.
+- See [Color spaces](./color-spaces.md) for component ranges.
 
 :::note
 This property becomes required if **any** color in the palette uses `components`.
