@@ -1,0 +1,9 @@
+{
+  "label": "Specification",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "title": "PaletteJSON Specification",
+    "description": "Detailed documentation of the PaletteJSON v0.1 schema: root object, palettes, colors, color spaces, references, accessibility, and legibility."
+  }
+}
