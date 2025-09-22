@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 Each entry in a palette’s `colors` array is a **Color object**.
 
 :::note
-A color must specify **at least one representation** (`hex` or `components`), but may include both. See [below](#hex-and-components-) for more information.
+A color must specify **at least one representation** (`hex` or `components`), but may include both. See [below](#hex-and-components) for more information.
 :::
 
 ## Properties
@@ -30,7 +30,7 @@ A color must specify **at least one representation** (`hex` or `components`), bu
 - **Type:** string
 - **Purpose:** Human-readable label.
 
-### `hex` and `components` \*
+### `hex` and `components` \* {#hex-and-components}
 
 :::info
 

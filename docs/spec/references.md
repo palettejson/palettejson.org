@@ -1,7 +1,7 @@
 ---
 id: references
 title: References
-sidebar_label: References
+sidebar_label: "Color: References"
 sidebar_position: 5
 description: Explains how colors can reference external systems such as Pantone, RAL, or NCS within the PaletteJSON schema.
 ---

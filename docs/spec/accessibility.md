@@ -1,8 +1,8 @@
 ---
 id: accessibility
 title: Accessibility
-sidebar_label: Accessibility
-sidebar_position: 6
+sidebar_label: "Palette: Accessibility"
+sidebar_position: 7
 description: Describes how to record color-vision-deficiency testing and other accessibility metadata at the palette level.
 ---
 

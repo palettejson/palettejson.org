@@ -1,8 +1,8 @@
 ---
 id: legibility
 title: Legibility
-sidebar_label: Legibility
-sidebar_position: 7
+sidebar_label: "Color: Legibility"
+sidebar_position: 6
 description: Provides per-color metadata about luminance, contrast ratios, and preferred text color for readability.
 ---
 
