@@ -18,28 +18,28 @@ When a color is defined with `components`, the numbers must be interpreted in th
 
 Both approaches have distinct advantages and trade-offs depending on your use case.
 
-## Palette-level colorSpace + components
+<h2>Palette-level (`colorSpace` + `components`)</h2>
 
-### Pros:
+<h3>Pros:</h3>
 
 - Consistency - entire palette uses one color space
 - Simpler tooling - tools know upfront what space all colors are in
 - Smaller file size - no repeated colorSpace declarations
 
-### Cons:
+<h3>Cons:</h3>
 
 - Inflexible - can't mix color spaces within one palette
 - Lossy conversion - if source colors are from different spaces, you're forced to convert everything to one space
 
-## Color-level altRepresentations
+<h2>Color-level (`altRepresentations`)</h2>
 
-### Pros:
+<h3>Pros:</h3>
 
 - Preserve original values - keep colors in their native spaces without conversion
 - Multiple representations - same color in Lab, sRGB, OKLCH simultaneously
 - Tool flexibility - apps can pick the most appropriate representation
 
-### Cons:
+<h3>Cons:</h3>
 
 - Larger files - repeated colorSpace declarations and multiple representations
 - Complexity - tools must handle mixed color spaces
