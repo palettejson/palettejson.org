@@ -172,166 +172,169 @@ This section provides full PaletteJSON files that illustrate the schema in pract
       "name": "Catppuccin Mocha",
       "slug": "catppuccin-mocha",
       "type": "categorical",
-      "author": { "name": "Catppuccin", "url": "https://catppuccin.com/" },
+      "author": {
+        "name": "Catppuccin",
+        "url": "https://catppuccin.com/"
+      },
       "license": "MIT",
       "tags": ["catppuccin", "mocha", "theme", "ui"],
-      "colorSpace": "sRGB",
+      "colorSpace": "HSL",
       "colors": [
         {
           "id": "rosewater",
           "name": "Rosewater",
           "hex": "#f5e0dc",
-          "components": [0.961, 0.878, 0.863]
+          "components": [10, 0.56, 0.91]
         },
         {
           "id": "flamingo",
           "name": "Flamingo",
           "hex": "#f2cdcd",
-          "components": [0.949, 0.804, 0.804]
+          "components": [0, 0.59, 0.88]
         },
         {
           "id": "pink",
           "name": "Pink",
           "hex": "#f5c2e7",
-          "components": [0.961, 0.761, 0.906]
+          "components": [316, 0.72, 0.86]
         },
         {
           "id": "mauve",
           "name": "Mauve",
           "hex": "#cba6f7",
-          "components": [0.796, 0.651, 0.969]
+          "components": [267, 0.84, 0.81]
         },
         {
           "id": "red",
           "name": "Red",
           "hex": "#f38ba8",
-          "components": [0.953, 0.545, 0.659]
+          "components": [343, 0.81, 0.75]
         },
         {
           "id": "maroon",
           "name": "Maroon",
           "hex": "#eba0ac",
-          "components": [0.922, 0.627, 0.675]
+          "components": [350, 0.65, 0.79]
         },
         {
           "id": "peach",
           "name": "Peach",
           "hex": "#fab387",
-          "components": [0.98, 0.702, 0.529]
+          "components": [23, 0.92, 0.75]
         },
         {
           "id": "yellow",
           "name": "Yellow",
           "hex": "#f9e2af",
-          "components": [0.976, 0.886, 0.686]
+          "components": [41, 0.86, 0.83]
         },
         {
           "id": "green",
           "name": "Green",
           "hex": "#a6e3a1",
-          "components": [0.651, 0.89, 0.631]
+          "components": [115, 0.54, 0.76]
         },
         {
           "id": "teal",
           "name": "Teal",
           "hex": "#94e2d5",
-          "components": [0.58, 0.886, 0.835]
+          "components": [170, 0.57, 0.73]
         },
         {
           "id": "sky",
           "name": "Sky",
           "hex": "#89dceb",
-          "components": [0.537, 0.863, 0.922]
+          "components": [189, 0.71, 0.73]
         },
         {
           "id": "sapphire",
           "name": "Sapphire",
           "hex": "#74c7ec",
-          "components": [0.455, 0.78, 0.925]
+          "components": [199, 0.76, 0.69]
         },
         {
           "id": "blue",
           "name": "Blue",
           "hex": "#89b4fa",
-          "components": [0.537, 0.706, 0.98]
+          "components": [217, 0.92, 0.76]
         },
         {
           "id": "lavender",
           "name": "Lavender",
           "hex": "#b4befe",
-          "components": [0.706, 0.745, 0.996]
+          "components": [232, 0.97, 0.85]
         },
         {
           "id": "text",
           "name": "Text",
           "hex": "#cdd6f4",
-          "components": [0.804, 0.839, 0.957]
+          "components": [226, 0.64, 0.88]
         },
         {
           "id": "subtext1",
           "name": "Subtext 1",
           "hex": "#bac2de",
-          "components": [0.729, 0.761, 0.871]
+          "components": [227, 0.35, 0.82]
         },
         {
           "id": "subtext0",
           "name": "Subtext 0",
           "hex": "#a6adc8",
-          "components": [0.651, 0.678, 0.784]
+          "components": [228, 0.24, 0.72]
         },
         {
           "id": "overlay2",
           "name": "Overlay 2",
           "hex": "#9399b2",
-          "components": [0.576, 0.6, 0.698]
+          "components": [228, 0.17, 0.64]
         },
         {
           "id": "overlay1",
           "name": "Overlay 1",
           "hex": "#7f849c",
-          "components": [0.498, 0.518, 0.612]
+          "components": [230, 0.13, 0.55]
         },
         {
           "id": "overlay0",
           "name": "Overlay 0",
           "hex": "#6c7086",
-          "components": [0.424, 0.439, 0.525]
+          "components": [231, 0.11, 0.47]
         },
         {
           "id": "surface2",
           "name": "Surface 2",
           "hex": "#585b70",
-          "components": [0.345, 0.357, 0.439]
+          "components": [233, 0.12, 0.39]
         },
         {
           "id": "surface1",
           "name": "Surface 1",
           "hex": "#45475a",
-          "components": [0.271, 0.278, 0.353]
+          "components": [234, 0.13, 0.31]
         },
         {
           "id": "surface0",
           "name": "Surface 0",
           "hex": "#313244",
-          "components": [0.192, 0.196, 0.267]
+          "components": [237, 0.16, 0.23]
         },
         {
           "id": "base",
           "name": "Base",
           "hex": "#1e1e2e",
-          "components": [0.118, 0.118, 0.18]
+          "components": [240, 0.21, 0.15]
         },
         {
           "id": "mantle",
           "name": "Mantle",
           "hex": "#181825",
-          "components": [0.094, 0.094, 0.145]
+          "components": [240, 0.21, 0.1]
         },
         {
           "id": "crust",
           "name": "Crust",
           "hex": "#11111b",
-          "components": [0.067, 0.067, 0.106]
+          "components": [240, 0.23, 0.09]
         }
       ]
     }
