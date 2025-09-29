@@ -54,9 +54,9 @@ We recommend using specific version URLs (like `v0.1`) in production application
 
 - Initial specification release
 - Core [root object](./spec/root.md), [palette object](./spec/palette.md), and [color object](./spec/color.md) definitions
-- Support for hex colors and color space components
+- Support for hex colors and color representation components
 - Optional accessibility and metadata properties
-- [Color space](./spec/color-spaces.md) specifications for RGB, HSL, HSV, CMYK, LAB, and LCH
+- [Color representation](./spec/color-representations.md) specifications for RGB, HSL, HSV, CMYK, LAB, and LCH
 
 ## Schema Repository
 

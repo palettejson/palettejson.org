@@ -3,7 +3,7 @@ id: color
 title: Color Object
 sidebar_label: Color
 sidebar_position: 3
-description: Defines individual colors within a palette, supporting hex codes, color-space components, optional metadata, and references.
+description: Defines individual colors within a palette, supporting hex codes, color representation components, optional metadata, and references.
 ---
 
 import Tabs from '@theme/Tabs';
@@ -49,11 +49,11 @@ A color must specify **at least one representation** (`hex` or `components`), bu
 
 #### `components` (optional \*)
 
-- **Type:** array of numbers (3 or 4 values, depending on color space).
-- **Purpose:** expresses the color using numeric components in the palette’s declared color space.
+- **Type:** array of numbers (3 or 4 values, depending on color representation).
+- **Purpose:** expresses the color using numeric components in the palette's declared color representation.
 
 :::note
-Interpretation depends on the parent palette’s `colorSpace`. Declare it on the [Palette](./palette.md) object whenever any color uses components. Valid component shapes and ranges are documented in [Color Spaces](./color-spaces.md).
+Interpretation depends on the parent palette's `colorRepresentation`. Declare it on the [Palette](./palette.md) object whenever any color uses components. Valid component shapes and ranges are documented in [Color Representations](./color-representations.md).
 :::
 
 ### `references` (optional)
@@ -80,13 +80,13 @@ If any color in the palette has `position`, **all** colors must.
 
 - **Type:** array of objects
 - **Fields:**
-  - `colorSpace` — string (required, one of: `sRGB`, `DisplayP3`, `Lab`, `OKLCH`, `sRGB-linear-extended`, `HSL`)
-  - `components` — array of numbers (required, following the specified color space rules)
-- **Purpose:** Alternative color space representations of the same color.
-- See [Color spaces](./color-spaces.md) for component ranges.
+  - `colorRepresentation` — string (required, one of: `sRGB`, `DisplayP3`, `Lab`, `OKLCH`, `sRGB-linear-extended`, `HSL`)
+  - `components` — array of numbers (required, following the specified color representation rules)
+- **Purpose:** Alternative color representations of the same color.
+- See [Color representations](./color-representations.md) for component ranges.
 
 :::info
-Unlike the palette-level `colorSpace` which applies to all `components`, each `altRepresentations` entry declares its own `colorSpace` and must be self-contained. This allows a single color to be expressed in multiple color spaces simultaneously.
+Unlike the palette-level `colorRepresentation` which applies to all `components`, each `altRepresentations` entry declares its own `colorRepresentation` and must be self-contained. This allows a single color to be expressed in multiple color representations simultaneously.
 :::
 
 ### `legibility` (optional)
@@ -100,7 +100,7 @@ Unlike the palette-level `colorSpace` which applies to all `components`, each `a
 - A color must have **at least one** of `hex` or `components`.
 - Having both is allowed and sometimes recommended.
 - `hex` is always interpreted in display sRGB.
-- `components` must match the parent palette’s `colorSpace`.
+- `components` must match the parent palette's `colorRepresentation`.
 - If positions are used, all colors in the palette must include one.
 - Extra fields are not permitted.
 
@@ -167,11 +167,11 @@ Below are common ways to represent colors.
   "components": [1.0, 0.2, 0.4],
   "altRepresentations": [
     {
-      "colorSpace": "OKLCH",
+      "colorRepresentation": "OKLCH",
       "components": [0.65, 0.25, 12.5]
     },
     {
-      "colorSpace": "Lab",
+      "colorRepresentation": "Lab",
       "components": [55.2, 75.8, 35.1]
     }
   ]

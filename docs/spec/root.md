@@ -150,7 +150,7 @@ Keep only `$schema`, `specVersion`, and `palettes`.
       "name": "Heatmap",
       "slug": "heatmap",
       "type": "sequential",
-      "colorSpace": "OKLCH",
+      "colorRepresentation": "OKLCH",
       "colors": [
         { "components": [0.18, 0.07, 260] },
         { "components": [0.58, 0.13, 120] },

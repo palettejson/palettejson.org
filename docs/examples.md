@@ -178,7 +178,7 @@ This section provides full PaletteJSON files that illustrate the schema in pract
       },
       "license": "MIT",
       "tags": ["catppuccin", "mocha", "theme", "ui"],
-      "colorSpace": "HSL",
+      "colorRepresentation": "HSL",
       "colors": [
         {
           "id": "rosewater",

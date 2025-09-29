@@ -65,16 +65,16 @@ Palettes describe a collection of colors along with metadata and optional access
 - **Type:** array of strings
 - **Purpose:** Provides keywords to aid discovery or filtering.
 
-### `colorSpace` (optional)
+### `colorRepresentation` (optional)
 
 - **Type:** string
 - **Allowed values:** `sRGB`, `DisplayP3`, `Lab`, `OKLCH`, `sRGB-linear-extended`, `HSL`
 - **Purpose:** Declares how any `components` values in this palette are interpreted.
-- See [Color spaces](./color-spaces.md) for component ranges.
+- See [Color representations](./color-representations.md) for component ranges.
 
 :::note
 This property becomes required if **any** color in the palette uses `components`.
-Entries using only `hex` values do not depend on `colorSpace`.
+Entries using only `hex` values do not depend on `colorRepresentation`.
 :::
 
 ### `accessibility` (optional)
@@ -96,8 +96,8 @@ The schema enforces two important invariants:
    If any color in the `colors` array declares a `position`, then **all colors** must declare a `position`.  
    Positions are 1-based indices.
 
-2. **Components vs color Space**:  
-   If any color uses `components`, then the palette must declare a `colorSpace`.
+2. **Components vs color representation**:
+   If any color uses `components`, then the palette must declare a `colorRepresentation`.
 
 ## Examples
 
@@ -106,7 +106,7 @@ The schema enforces two important invariants:
   "name": "Brand Core",
   "slug": "brand-core",
   "type": "categorical",
-  "colorSpace": "DisplayP3",
+  "colorRepresentation": "DisplayP3",
   "colors": [
     { "id": "primary", "name": "Primary", "components": [0.1, 0.4, 0.9, 1.0] },
     { "id": "secondary", "name": "Secondary", "hex": "#FF6600" }

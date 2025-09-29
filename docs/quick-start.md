@@ -41,7 +41,7 @@ A minimal valid file contains at least one palette, with a name, slug, type, and
 - **colors** — array with **at least two** colors.
 
 :::note color values
-Each color can be defined with **`hex`** (`#RRGGBB` or `#RRGGBBAA`) **or** **`components`** (numeric array interpreted by a palette-level `colorSpace`).  
+Each color can be defined with **`hex`** (`#RRGGBB` or `#RRGGBBAA`) **or** **`components`** (numeric array interpreted by a palette-level `colorRepresentation`).
 If both are present, consumers should treat **`components`** as authoritative and use `hex` for preview/interoperability.
 :::
 
@@ -134,10 +134,10 @@ print("Valid!")
 
 ## Validation rules
 
-- If **any** color in a palette uses `components`, the palette **must** declare `colorSpace`.
+- If **any** color in a palette uses `components`, the palette **must** declare `colorRepresentation`.
 - If **any** color has a `position`, **all** colors in that palette must have a `position` (1-based).
 - `hex` is always interpreted as **display sRGB**; alpha (if present) is the last pair: `#RRGGBBAA`.
-- Component ranges depend on `colorSpace`:
+- Component ranges depend on `colorRepresentation`:
   - `sRGB` / `DisplayP3`: 3–4 numbers, each in **[0, 1]**
   - `sRGB-linear-extended`: either 3 numbers (unbounded) **or** 4 with alpha in **[0, 1]**
   - `Lab`: exactly 3 numbers; **L** in **[0, 100]** (a/b unbounded)
