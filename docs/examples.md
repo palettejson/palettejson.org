@@ -184,157 +184,313 @@ This section provides full PaletteJSON files that illustrate the schema in pract
           "id": "rosewater",
           "name": "Rosewater",
           "hex": "#f5e0dc",
-          "components": [10, 0.56, 0.91]
+          "components": [10, 0.56, 0.91],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.9608, 0.8784, 0.8627]
+            }
+          ]
         },
         {
           "id": "flamingo",
           "name": "Flamingo",
           "hex": "#f2cdcd",
-          "components": [0, 0.59, 0.88]
+          "components": [0, 0.59, 0.88],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.949, 0.8039, 0.8039]
+            }
+          ]
         },
         {
           "id": "pink",
           "name": "Pink",
           "hex": "#f5c2e7",
-          "components": [316, 0.72, 0.86]
+          "components": [316, 0.72, 0.86],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.9608, 0.7608, 0.9059]
+            }
+          ]
         },
         {
           "id": "mauve",
           "name": "Mauve",
           "hex": "#cba6f7",
-          "components": [267, 0.84, 0.81]
+          "components": [267, 0.84, 0.81],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.7961, 0.651, 0.9686]
+            }
+          ]
         },
         {
           "id": "red",
           "name": "Red",
           "hex": "#f38ba8",
-          "components": [343, 0.81, 0.75]
+          "components": [343, 0.81, 0.75],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.9529, 0.5451, 0.6588]
+            }
+          ]
         },
         {
           "id": "maroon",
           "name": "Maroon",
           "hex": "#eba0ac",
-          "components": [350, 0.65, 0.79]
+          "components": [350, 0.65, 0.79],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.9216, 0.6275, 0.6745]
+            }
+          ]
         },
         {
           "id": "peach",
           "name": "Peach",
           "hex": "#fab387",
-          "components": [23, 0.92, 0.75]
+          "components": [23, 0.92, 0.75],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.9804, 0.702, 0.5294]
+            }
+          ]
         },
         {
           "id": "yellow",
           "name": "Yellow",
           "hex": "#f9e2af",
-          "components": [41, 0.86, 0.83]
+          "components": [41, 0.86, 0.83],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.9765, 0.8863, 0.6863]
+            }
+          ]
         },
         {
           "id": "green",
           "name": "Green",
           "hex": "#a6e3a1",
-          "components": [115, 0.54, 0.76]
+          "components": [115, 0.54, 0.76],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.651, 0.8902, 0.6314]
+            }
+          ]
         },
         {
           "id": "teal",
           "name": "Teal",
           "hex": "#94e2d5",
-          "components": [170, 0.57, 0.73]
+          "components": [170, 0.57, 0.73],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.5804, 0.8863, 0.8353]
+            }
+          ]
         },
         {
           "id": "sky",
           "name": "Sky",
           "hex": "#89dceb",
-          "components": [189, 0.71, 0.73]
+          "components": [189, 0.71, 0.73],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.5373, 0.8627, 0.9216]
+            }
+          ]
         },
         {
           "id": "sapphire",
           "name": "Sapphire",
           "hex": "#74c7ec",
-          "components": [199, 0.76, 0.69]
+          "components": [199, 0.76, 0.69],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.4549, 0.7804, 0.9255]
+            }
+          ]
         },
         {
           "id": "blue",
           "name": "Blue",
           "hex": "#89b4fa",
-          "components": [217, 0.92, 0.76]
+          "components": [217, 0.92, 0.76],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.5373, 0.7059, 0.9804]
+            }
+          ]
         },
         {
           "id": "lavender",
           "name": "Lavender",
           "hex": "#b4befe",
-          "components": [232, 0.97, 0.85]
+          "components": [232, 0.97, 0.85],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.7059, 0.7451, 0.9961]
+            }
+          ]
         },
         {
           "id": "text",
           "name": "Text",
           "hex": "#cdd6f4",
-          "components": [226, 0.64, 0.88]
+          "components": [226, 0.64, 0.88],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.8039, 0.8392, 0.9569]
+            }
+          ]
         },
         {
           "id": "subtext1",
           "name": "Subtext 1",
           "hex": "#bac2de",
-          "components": [227, 0.35, 0.82]
+          "components": [227, 0.35, 0.82],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.7294, 0.7608, 0.8706]
+            }
+          ]
         },
         {
           "id": "subtext0",
           "name": "Subtext 0",
           "hex": "#a6adc8",
-          "components": [228, 0.24, 0.72]
+          "components": [228, 0.24, 0.72],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.651, 0.6784, 0.7843]
+            }
+          ]
         },
         {
           "id": "overlay2",
           "name": "Overlay 2",
           "hex": "#9399b2",
-          "components": [228, 0.17, 0.64]
+          "components": [228, 0.17, 0.64],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.5765, 0.6, 0.698]
+            }
+          ]
         },
         {
           "id": "overlay1",
           "name": "Overlay 1",
           "hex": "#7f849c",
-          "components": [230, 0.13, 0.55]
+          "components": [230, 0.13, 0.55],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.498, 0.5176, 0.6118]
+            }
+          ]
         },
         {
           "id": "overlay0",
           "name": "Overlay 0",
           "hex": "#6c7086",
-          "components": [231, 0.11, 0.47]
+          "components": [231, 0.11, 0.47],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.4235, 0.4392, 0.5255]
+            }
+          ]
         },
         {
           "id": "surface2",
           "name": "Surface 2",
           "hex": "#585b70",
-          "components": [233, 0.12, 0.39]
+          "components": [233, 0.12, 0.39],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.3451, 0.3569, 0.4392]
+            }
+          ]
         },
         {
           "id": "surface1",
           "name": "Surface 1",
           "hex": "#45475a",
-          "components": [234, 0.13, 0.31]
+          "components": [234, 0.13, 0.31],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.2706, 0.2784, 0.3529]
+            }
+          ]
         },
         {
           "id": "surface0",
           "name": "Surface 0",
           "hex": "#313244",
-          "components": [237, 0.16, 0.23]
+          "components": [237, 0.16, 0.23],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.1922, 0.1961, 0.2667]
+            }
+          ]
         },
         {
           "id": "base",
           "name": "Base",
           "hex": "#1e1e2e",
-          "components": [240, 0.21, 0.15]
+          "components": [240, 0.21, 0.15],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.1176, 0.1176, 0.1804]
+            }
+          ]
         },
         {
           "id": "mantle",
           "name": "Mantle",
           "hex": "#181825",
-          "components": [240, 0.21, 0.1]
+          "components": [240, 0.21, 0.1],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.0941, 0.0941, 0.1451]
+            }
+          ]
         },
         {
           "id": "crust",
           "name": "Crust",
           "hex": "#11111b",
-          "components": [240, 0.23, 0.09]
+          "components": [240, 0.23, 0.09],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.0667, 0.0667, 0.1059]
+            }
+          ]
         }
       ]
     }
