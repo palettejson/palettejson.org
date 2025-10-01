@@ -23,12 +23,14 @@ This helps consumers choose appropriate foreground text colors and assess contra
 
 - **Type:** number
 - **Minimum:** 1
+- **Maximum:** 21
 - **Purpose:** contrast ratio of the color against pure white.
 
 ### `contrastVsBlack` (optional)
 
 - **Type:** number
 - **Minimum:** 1
+- **Maximum:** 21
 - **Purpose:** contrast ratio of the color against pure black.
 
 ### `preferredText` (optional)
@@ -36,6 +38,12 @@ This helps consumers choose appropriate foreground text colors and assess contra
 - **Type:** string
 - **Allowed values:** `light`, `dark`
 - **Purpose:** guidance for whether light or dark text is more legible over this color.
+
+:::info WCAG Contrast Ratios
+Contrast ratios follow the WCAG 2.x standard, which defines ratios on a scale from 1:1 (no contrast) to 21:1 (maximum contrast between pure white and pure black in sRGB).
+
+These values are computed for the **sRGB color space**. HDR displays or other contrast metrics (e.g., APCA) would require different fields and are not currently supported.
+:::
 
 ## Examples
 

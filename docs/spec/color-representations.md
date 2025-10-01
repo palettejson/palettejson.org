@@ -79,13 +79,22 @@ Example:
 
 ### Lab
 
-- **Array form:** `[L, a, b]`
+**Illuminant:** D50 (per CSS Color Module 4)
+
+- **Array form:** `[L, a, b]` or `[L, a, b, A]`
 - **Ranges:**
   - **L:** 0 ≤ L ≤ 100
   - **a/b:** unbounded (schema does not clamp them)
+  - **Alpha (optional):** 0 ≤ A ≤ 1
 
-:::note
-Values of `a` or `b` with very large magnitude may indicate an unrealistic color.  
+:::note Lab Illuminant
+PaletteJSON uses the **D50 illuminant** for Lab colors, following the CSS Color Module 4 standard. This matches the ICC v4 Profile Connection Space and ensures compatibility with web browsers and modern design tools.
+
+If you're working with Lab colors using a D65 illuminant (common in scientific contexts), you must convert to D50 before including them in a PaletteJSON file.
+:::
+
+:::note Unbounded a/b Components
+Values of `a` or `b` with very large magnitude may indicate an unrealistic color.
 The schema does not enforce limits here — linting tools can warn about suspicious values.
 :::
 
@@ -97,19 +106,36 @@ Example:
 }
 ```
 
+Example with alpha:
+
+```json
+{
+  "components": [65.0, 30.5, -18.2, 0.85]
+}
+```
+
 ### OKLCH
 
-- **Array form:** `[L, C, h]`
+- **Array form:** `[L, C, h]` or `[L, C, h, A]`
 - **Ranges:**
   - **L:** 0 ≤ L ≤ 1
   - **C:** ≥ 0
   - **h (hue):** 0 ≤ h < 360
+  - **Alpha (optional):** 0 ≤ A ≤ 1
 
 Example:
 
 ```json
 {
   "components": [0.72, 0.14, 210.5]
+}
+```
+
+Example with alpha:
+
+```json
+{
+  "components": [0.72, 0.14, 210.5, 0.5]
 }
 ```
 
@@ -155,3 +181,10 @@ Example:
 - `components` must match the palette's declared `colorRepresentation`.
 - `altRepresentations` entries are self-contained: each must declare its own `colorRepresentation` and follow the corresponding component validation rules.
 - If a palette mixes hex and components, the hex values remain in display sRGB; components follow the palette-level color representation.
+
+:::tip See also
+
+- **[Choosing Color Spaces](../guides/choosing-color-spaces)** — Decision guide for selecting the right color representation
+- **[Precision & Accuracy](../guides/precision-and-accuracy)** — Recommended decimal precision for each color space
+- **[Gamut Mapping](../guides/gamut-mapping)** — Converting between color spaces without losing perceptual quality
+  :::

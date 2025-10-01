@@ -2,7 +2,7 @@
 id: schemas
 title: Schema Versions
 sidebar_label: Versions
-sidebar_position: 10
+sidebar_position: 99
 description: Download and access all versions of the PaletteJSON schema specification.
 ---
 

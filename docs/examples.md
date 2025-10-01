@@ -2,7 +2,7 @@
 id: examples
 title: Examples
 sidebar_label: Examples
-sidebar_position: 4
+sidebar_position: 5
 description: Sample PaletteJSON files demonstrating real-world palettes from Apple and Microsoft.
 ---
 
@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 # Examples
 
-This section provides full PaletteJSON files that illustrate the schema in practice.
+This section provides full PaletteJSON files that illustrate the schema in practice. More examples can be found in the paletteJSON schema repository ([link](https://github.com/palettejson/palettejson-schema/tree/main/examples)).
 
 <Tabs>
   <TabItem value="apple" label="Apple Crayons">
@@ -88,7 +88,7 @@ This section provides full PaletteJSON files that illustrate the schema in pract
 
   <TabItem value="microsoft" label="Microsoft Office">
   Multiple palettes in a single file, each with a description and author metadata.
-  Only three palettes included for brevity.
+  Only three palettes included for brevity. Full example can be found in the paletteJSON schema repository.
 
 ```json
 {
@@ -161,7 +161,7 @@ This section provides full PaletteJSON files that illustrate the schema in pract
 
   <TabItem value="catppuccin" label="Cattpuccin">
   Demonstrates a rich palette with IDs, metadata, and both hex and component values for each color.
-  Only one palette included for brevity.
+  Only one palette included for brevity. Full example can be found in the paletteJSON schema repository.
 
 ```json
 {
@@ -499,8 +499,65 @@ This section provides full PaletteJSON files that illustrate the schema in pract
 ```
 
  </TabItem>
-</Tabs>
 
----
+  <TabItem value="alpha" label="With Alpha Channels">
+  Demonstrates transparency using the 4th component in multiple color spaces.
+
+```json
+{
+  "$schema": "https://palettejson.org/schema/v0.1/palettejson.schema.json",
+  "specVersion": "0.1",
+  "palettes": [
+    {
+      "name": "Translucent UI",
+      "slug": "translucent-ui",
+      "type": "categorical",
+      "description": "Glass morphism design system with translucent surfaces",
+      "colorRepresentation": "sRGB",
+      "colors": [
+        {
+          "id": "glass-light",
+          "name": "Glass Light",
+          "hex": "#FFFFFFCC",
+          "components": [1.0, 1.0, 1.0, 0.8]
+        },
+        {
+          "id": "glass-dark",
+          "name": "Glass Dark",
+          "hex": "#00000080",
+          "components": [0.0, 0.0, 0.0, 0.5],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "OKLCH",
+              "components": [0.0, 0.0, 0.0, 0.5]
+            }
+          ]
+        },
+        {
+          "id": "accent-translucent",
+          "name": "Accent Translucent",
+          "hex": "#3B82F699",
+          "components": [0.2314, 0.5098, 0.9647, 0.6],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "Lab",
+              "components": [51.2345, 25.6789, -65.4321, 0.6]
+            }
+          ]
+        },
+        {
+          "id": "overlay",
+          "name": "Overlay",
+          "hex": "#1E293B4D",
+          "components": [0.1176, 0.1608, 0.2314, 0.3]
+        }
+      ]
+    }
+  ]
+}
+```
+
+  </TabItem>
+</Tabs>
 
 Next: return to the [Specification](./category/specification/) or explore other parts of the docs.

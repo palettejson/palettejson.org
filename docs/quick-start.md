@@ -140,14 +140,15 @@ print("Valid!")
 - Component ranges depend on `colorRepresentation`:
   - `sRGB` / `DisplayP3`: 3–4 numbers, each in **[0, 1]**
   - `sRGB-linear-extended`: either 3 numbers (unbounded) **or** 4 with alpha in **[0, 1]**
-  - `Lab`: exactly 3 numbers; **L** in **[0, 100]** (a/b unbounded)
-  - `OKLCH`: exactly 3 numbers; **L** in **[0, 1]**, **C ≥ 0**, **h ∈ [0, 360)**
-
----
+  - `Lab`: 3–4 numbers; **L** in **[0, 100]**, **a/b** unbounded, optional **alpha** in **[0, 1]**
+  - `OKLCH`: 3–4 numbers; **L** in **[0, 1]**, **C ≥ 0**, **h ∈ [0, 360)**, optional **alpha** in **[0, 1]**
+  - `HSL`: 3–4 numbers; **H** in **[0, 360)**, **S/L** in **[0, 1]**, optional **alpha** in **[0, 1]**
+- Contrast ratios in `legibility` must be between **1** and **21** (WCAG 2.x maximum).
 
 :::tip Next steps
 
 - Read the [Root object](./spec/root) and [Palette](./spec/palette) specs for required/optional fields.
 - See the [Color](./spec/color) page for `hex` vs `components`, `references`, `position`, and legibility metadata.
+- Learn about [choosing color spaces](./guides/choosing-color-spaces), [precision requirements](./guides/precision-and-accuracy), and [gamut mapping](./guides/gamut-mapping).
 - Explore [Examples](./examples) for richer use cases.
   :::

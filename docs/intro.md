@@ -19,17 +19,16 @@ It defines a portable, machine-readable way to describe palettes, including colo
 
 ## About this documentation
 
-This site documents the **v0.1 schema** in detail.  
-Here you’ll find:
+This site documents the **v0.1 schema** in detail.
+Here you'll find:
 
 - A [Quick Start](./quick-start.md) with minimal examples.
 - A full [Specification](./category/specification/) explaining every field.
+- [Guides](./category/guides/) for working with color spaces, precision, and workflows.
 - Practical [Examples](./examples.md) showing richer use cases.
 
 :::caution Versioning
 PaletteJSON is still experimental. Future versions may add new features or tighten validation rules.  
 :::
-
----
 
 Ready to dive in? Start with the [Quick Start guide](./quick-start.md).

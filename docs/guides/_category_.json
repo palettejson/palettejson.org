@@ -1,0 +1,9 @@
+{
+  "label": "Guides",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "PaletteJSON Guides",
+    "description": "Practical guides for working with PaletteJSON color spaces, precision requirements, and workflow best practices."
+  }
+}

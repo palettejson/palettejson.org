@@ -77,6 +77,10 @@ This property becomes required if **any** color in the palette uses `components`
 Entries using only `hex` values do not depend on `colorRepresentation`.
 :::
 
+:::tip
+See the [Choosing Color Spaces guide](../guides/choosing-color-spaces.md) for help selecting the appropriate color representation, and the [Precision & Accuracy guide](../guides/precision-and-accuracy.md) for recommended decimal precision.
+:::
+
 ### `accessibility` (optional)
 
 - **Type:** object

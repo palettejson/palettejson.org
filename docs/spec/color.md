@@ -56,6 +56,41 @@ A color must specify **at least one representation** (`hex` or `components`), bu
 Interpretation depends on the parent palette's `colorRepresentation`. Declare it on the [Palette](./palette.md) object whenever any color uses components. Valid component shapes and ranges are documented in [Color Representations](./color-representations.md).
 :::
 
+#### Alpha Channel Encoding
+
+Alpha channels behave differently depending on how the color is represented:
+
+**In Component Arrays:**
+
+Alpha is **always linear** (not gamma-encoded):
+- Range: 0–1 (0 = fully transparent, 1 = fully opaque)
+- Applies uniformly across all color spaces
+- Fourth component in arrays: `[R, G, B, A]`, `[L, a, b, A]`, `[L, C, h, A]`, etc.
+
+**Example:**
+```json
+{
+  "components": [1.0, 0.5, 0.2, 0.85]  // 85% opaque
+}
+```
+
+**In Hex Colors (#RRGGBBAA):**
+
+Alpha **IS gamma-encoded** (matches CSS Color Module 4):
+- Last 2 hex digits represent gamma-corrected alpha
+- Matches browser behavior for compatibility
+
+**Example:**
+```json
+{
+  "hex": "#ff336680"  // 80 hex = 128 decimal ≈ 50% gamma-encoded alpha
+}
+```
+
+:::warning Hex vs Component Alpha
+The hex value `#ff336680` does **not** equal `components: [1.0, 0.2, 0.4, 0.5]` due to gamma encoding in hex alpha. Use color conversion libraries (e.g., colorjs.io, Culori) to ensure consistency when converting between hex and component representations.
+:::
+
 ### `references` (optional)
 
 - **Type:** array of objects
