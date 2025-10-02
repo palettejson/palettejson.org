@@ -49,6 +49,7 @@ export default function HomepageFeatures() {
 
             <Tabs>
               <TabItem value="simple" label="Simple" default>
+                <p>A palette can be as simple as two or more HEX values.</p>
                 <CodeBlock language="json">{`{
   "palettes": [
     {
@@ -65,22 +66,94 @@ export default function HomepageFeatures() {
               </TabItem>
 
               <TabItem value="complex" label="Complex">
+                <p>
+                  A palette can be comprehensive: multiple color
+                  representations, accessibility testing, legibility metrics,
+                  and external color references.
+                </p>
                 <CodeBlock language="json">{`{
   "palettes": [
     {
-      "name": "Sunset Gradient",
-      "slug": "sunset-gradient",
-      "type": "sequential",
+      "name": "Accessible Brand Core",
+      "slug": "accessible-brand-core",
+      "type": "categorical",
+      "description": "Core brand palette tested for accessibility across CVD conditions",
+      "version": "2.1.0",
+      "author": {
+        "name": "Design Systems Team",
+        "url": "https://example.design"
+      },
+      "license": "Apache-2.0",
+      "tags": ["brand", "ui", "accessible", "wcag-aa"],
+      "colorRepresentation": "OKLCH",
+      "accessibility": {
+        "cvdTestedFor": ["protanopia", "deuteranopia", "tritanopia"],
+        "cvdMaxDistinctClasses": {
+          "overall": 4,
+          "protanopia": 3,
+          "deuteranopia": 3
+        },
+        "tools": ["Sim Daltonism", "Coblis"],
+        "notes": "All colors meet WCAG 2.1 AA contrast requirements."
+      },
       "colors": [
         {
-          "hex": "#003f5c",
-          "position": 0,
-          "references": { "pantone": { "code": "YYZ-2112 Not a Real Pantone Code" } }
+          "id": "primary",
+          "name": "Primary Blue",
+          "hex": "#0066CC",
+          "components": [0.5220, 0.1771, 255.8297],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "Lab",
+              "components": [43.0415, 6.7780, -60.8838]
+            },
+            {
+              "colorRepresentation": "sRGB",
+              "components": [0.0000, 0.4000, 0.8000]
+            }
+          ],
+          "references": [
+            {
+              "system": "pantone",
+              "code": "PLACEHOLDER-P",
+              "library": "Solid Coated",
+              "note": "Closest match for screen-to-print"
+            }
+          ],
+          "position": 1,
+          "notes": "Core interactive element color.",
+          "legibility": {
+            "luminance": 0.1386,
+            "contrastVsWhite": 5.57,
+            "contrastVsBlack": 3.77,
+            "preferredText": "light"
+          }
         },
-        { "hex": "#58508d", "position": 1 },
-        { "hex": "#bc5090", "position": 2 },
-        { "hex": "#ff6361", "position": 3 },
-        { "hex": "#ffa600", "position": 4 }
+        {
+          "id": "accent",
+          "name": "Accent Coral",
+          "hex": "#FF6B4A",
+          "components": [0.7066, 0.1875, 34.0776],
+          "altRepresentations": [
+            {
+              "colorRepresentation": "Lab",
+              "components": [64.3263, 56.1317, 47.7416]
+            }
+          ],
+          "position": 2,
+          "legibility": {
+            "luminance": 0.3227,
+            "contrastVsWhite": 2.82,
+            "preferredText": "dark"
+          }
+        },
+        {
+          "id": "success",
+          "name": "Success Green",
+          "hex": "#00A676",
+          "components": [0.6420, 0.1368, 164.0161],
+          "position": 3
+        }
       ]
     }
   ]
