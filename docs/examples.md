@@ -558,6 +558,87 @@ This section provides full PaletteJSON files that illustrate the schema in pract
 ```
 
   </TabItem>
+
+  <TabItem value="grouping" label="With Grouping">
+  Demonstrates color grouping with a tonal scale and semantic family.
+
+```json
+{
+  "$schema": "https://palettejson.org/schema/v0.1/palettejson.schema.json",
+  "specVersion": "0.1",
+  "palettes": [
+    {
+      "name": "Design System",
+      "slug": "design-system",
+      "type": "categorical",
+      "description": "Multi-family design system with grouped color scales",
+      "colors": [
+        {
+          "id": "blue-300",
+          "name": "Blue 300",
+          "hex": "#93C5FD",
+          "position": 1,
+          "groupId": "blue-scale"
+        },
+        {
+          "id": "blue-400",
+          "name": "Blue 400",
+          "hex": "#60A5FA",
+          "position": 2,
+          "groupId": "blue-scale"
+        },
+        {
+          "id": "blue-500",
+          "name": "Blue 500",
+          "hex": "#3B82F6",
+          "position": 3,
+          "groupId": "blue-scale",
+          "referenceInGroup": true,
+          "notes": "Reference color for blue family"
+        },
+        {
+          "id": "blue-600",
+          "name": "Blue 600",
+          "hex": "#2563EB",
+          "position": 4,
+          "groupId": "blue-scale"
+        },
+        {
+          "id": "blue-700",
+          "name": "Blue 700",
+          "hex": "#1E40AF",
+          "position": 5,
+          "groupId": "blue-scale"
+        },
+        {
+          "id": "success-base",
+          "name": "Success",
+          "hex": "#10B981",
+          "position": 6,
+          "groupId": "success-family",
+          "referenceInGroup": true
+        },
+        {
+          "id": "success-light",
+          "name": "Success Light",
+          "hex": "#6EE7B7",
+          "position": 7,
+          "groupId": "success-family"
+        },
+        {
+          "id": "success-dark",
+          "name": "Success Dark",
+          "hex": "#059669",
+          "position": 8,
+          "groupId": "success-family"
+        }
+      ]
+    }
+  ]
+}
+```
+
+  </TabItem>
 </Tabs>
 
 Next: return to the [Specification](./category/specification/) or explore other parts of the docs.

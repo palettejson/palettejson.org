@@ -136,6 +136,7 @@ print("Valid!")
 
 - If **any** color in a palette uses `components`, the palette **must** declare `colorRepresentation`.
 - If **any** color has a `position`, **all** colors in that palette must have a `position` (1-based).
+- **Grouping constraint:** At most **one** color per `groupId` may have `referenceInGroup: true` (requires external validation).
 - `hex` is always interpreted as **display sRGB**; alpha (if present) is the last pair: `#RRGGBBAA`.
 - Component ranges depend on `colorRepresentation`:
   - `sRGB` / `DisplayP3`: 3–4 numbers, each in **[0, 1]**

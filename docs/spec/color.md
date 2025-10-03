@@ -102,8 +102,50 @@ The hex value `#ff336680` does **not** equal `components: [1.0, 0.2, 0.4, 0.5]` 
 - **Type:** integer (≥ 1)
 - **Purpose:** explicit ordering index.
 
-:::caution  
-If any color in the palette has `position`, **all** colors must.  
+:::caution
+If any color in the palette has `position`, **all** colors must.
+:::
+
+### `groupId` (optional)
+
+- **Type:** string
+- **Pattern:** `^[A-Za-z0-9][A-Za-z0-9._-]*$`
+- **Purpose:** Group identifier for organizing related colors (e.g., tonal scales, color harmonies, semantic families).
+
+:::info
+Colors with the same `groupId` value are considered related. This enables tools to:
+- Recognize color families programmatically
+- Export/filter color groups as units
+- Visualize relationships between colors
+
+**Valid examples:** `blue-scale`, `brand.primary.tints`, `red-family_2024`
+
+**Invalid examples:** `-blue` (can't start with hyphen), `blue scale` (no spaces), `blue@scale!` (invalid characters)
+:::
+
+**Common use cases:**
+- **Tonal scales:** Group variants by lightness (e.g., Tailwind blue-300, blue-400, blue-500)
+- **Brand families:** Group primary color with tints/shades/variants
+- **Color harmonies:** Group complementary, analogous, or triadic colors
+- **Semantic groupings:** Group error/warning/success color families
+
+### `referenceInGroup` (optional)
+
+- **Type:** boolean
+- **Default:** `false` (when omitted)
+- **Purpose:** Marks this color as the reference/canonical member of its `groupId`.
+
+:::info
+This field identifies the "base" color from which variants derive:
+- The base tone in a tonal scale (e.g., Tailwind blue-500)
+- The canonical brand color in a color family
+- The starting point for tints/shades
+
+**When to use:**
+- **Set to `true`:** For hierarchical groups with a clear reference color
+- **Omit (or set to `false`):** For peer relationships (harmonies) or non-reference variants
+
+**Business rule:** At most **one** color per `groupId` should have `referenceInGroup: true`. This constraint requires external validation beyond JSON Schema.
 :::
 
 ### `notes` (optional)
@@ -137,6 +179,7 @@ Unlike the palette-level `colorRepresentation` which applies to all `components`
 - `hex` is always interpreted in display sRGB.
 - `components` must match the parent palette's `colorRepresentation`.
 - If positions are used, all colors in the palette must include one.
+- **Grouping constraint:** At most **one** color per `groupId` may have `referenceInGroup: true`. This business rule requires external validation beyond JSON Schema.
 - Extra fields are not permitted.
 
 ## Examples
@@ -179,15 +222,17 @@ Below are common ways to represent colors.
 ```
 
   </TabItem>
-  <TabItem value="positioned" label="With Position">
+  <TabItem value="grouping" label="With Grouping">
 
 ```json
 {
-  "id": "step1",
-  "name": "Light Gray",
-  "hex": "#EEEEEE",
-  "position": 1,
-  "notes": "Background shade"
+  "id": "blue-500",
+  "name": "Blue 500",
+  "hex": "#3B82F6",
+  "position": 3,
+  "groupId": "blue-scale",
+  "referenceInGroup": true,
+  "notes": "Reference color in blue tonal scale"
 }
 ```
 
