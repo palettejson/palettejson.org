@@ -17,7 +17,7 @@ Every PaletteJSON file is a single JSON object that follows the schema definitio
 {
   "$schema": "https://palettejson.org/schema/v0.1/palettejson.schema.json",
   "specVersion": "0.1",
-  "description": "A collection of vibrant colour palettes",
+  "description": "A collection of vibrant color palettes",
   "palettes": [
     /* ... */
   ]
@@ -61,7 +61,7 @@ If `specVersion` is omitted, consumers should assume the file follows the latest
 Example:
 
 ```json
-"description": "A collection of vibrant colour palettes"
+"description": "A collection of vibrant color palettes"
 ```
 
 ### `palettes` (required)
