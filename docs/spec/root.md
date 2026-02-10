@@ -11,12 +11,13 @@ import TabItem from '@theme/TabItem';
 
 # Root Object
 
-Every PaletteJSON file is a single JSON object that follows the schema definition. At the root level, three properties are recognized.
+Every PaletteJSON file is a single JSON object that follows the schema definition. At the root level, four properties are recognized.
 
 ```json
 {
   "$schema": "https://palettejson.org/schema/v0.1/palettejson.schema.json",
   "specVersion": "0.1",
+  "description": "A collection of vibrant colour palettes",
   "palettes": [
     /* ... */
   ]
@@ -51,6 +52,17 @@ Example:
 :::note
 If `specVersion` is omitted, consumers should assume the file follows the latest version.
 :::
+
+### `description` (optional)
+
+- **Type:** string
+- **Purpose:** Top-level freeform notes or summary about the file.
+
+Example:
+
+```json
+"description": "A collection of vibrant colour palettes"
+```
 
 ### `palettes` (required)
 
@@ -129,12 +141,13 @@ Keep only `$schema`, `specVersion`, and `palettes`.
 
   </TabItem>
   <TabItem value="multi" label="Multiple palettes">
-  Demonstrates several palettes in one file, mixing hex and component definitions.
+  Demonstrates multiple palettes in one file, mixing hex and component definitions.
 
 ```json
 {
   "$schema": "https://palettejson.org/schema/v0.1/palettejson.schema.json",
   "specVersion": "0.1",
+  "description": "Demonstration of multiple palettes in a single file",
   "palettes": [
     {
       "name": "UI categorical",

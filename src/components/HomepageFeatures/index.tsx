@@ -72,6 +72,7 @@ export default function HomepageFeatures() {
                   and external color references.
                 </p>
                 <CodeBlock language="json">{`{
+ "description": "A complex example",
  "palettes": [
       {
         "name": "Accessible Brand Core",
