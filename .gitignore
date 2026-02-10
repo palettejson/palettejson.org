@@ -6,6 +6,7 @@
 
 # LLMs
 /.claude
+AGENTS.md
 CLAUDE.md
 
 # Generated files
